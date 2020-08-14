@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         showItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, phar.class);
+                Intent intent = new Intent(MainActivity.this, next.class);
                 intent.putExtra("newOrderItems","showItems");
                 startActivity(intent);
 
