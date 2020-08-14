@@ -1,0 +1,31 @@
+package com.example.myapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+    Button showItem;
+    @Override
+
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        showItem = (Button)findViewById(R.id.button1) ;
+
+        showItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, phar.class);
+                intent.putExtra("newOrderItems","showItems");
+                startActivity(intent);
+
+            }
+        });
+    }
+}
